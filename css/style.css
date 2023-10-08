@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .navbar .navbar-nav a::after {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--primary);
@@ -175,7 +175,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../img/header-bg.jpg');
+  background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -198,10 +198,6 @@ body {
   position: absolute;
   /* background: salmon; */
   inset: 0;
-  -webkit-mask-image: url('../img/header-bg.jpg');
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  -webkit-mask-position: center;
 }
 
 .hero .content {
@@ -278,10 +274,6 @@ body {
 
 .about .row .about-img img {
   width: 100%;
-  -webkit-mask-image: url('../img/menu/splash.svg');
-  -webkit-mask-size: 50%;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
 }
 
 .about .row .content {
@@ -406,6 +398,16 @@ body {
   text-decoration: line-through;
   font-weight: lighter;
   font-size: 1rem;
+}
+
+/* Mengatur teks yang dihapus untuk memiliki garis melintang */
+.del {
+  text-decoration: line-through;
+}
+
+/* Mengatur warna teks yang dihapus menjadi abu-abu, misalnya */
+.del {
+  color: gray;
 }
 
 /* Contact Section */
