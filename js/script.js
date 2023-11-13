@@ -118,3 +118,91 @@ window.onclick = (e) => {
     itemDetailModal4.style.display = "none";
   }
 };
+
+// Get the button element
+var btnBeli = document.querySelector("#btn-beli");
+
+// Add event listener to the button
+btnBeli.addEventListener("click", function () {
+  // Save the status to Local Storage
+  window.localStorage.setItem("status", "beli");
+
+  // Display the notification
+  alert("Pembelian berhasil!");
+});
+
+// Get the button element
+var btnBeli = document.querySelector("#btn-beli2");
+
+// Add event listener to the button
+btnBeli.addEventListener("click", function () {
+  // Save the status to Local Storage
+  window.localStorage.setItem("status", "beli");
+
+  // Display the notification
+  alert("Pembelian berhasil!");
+});
+
+// Get the button element
+var btnBeli = document.querySelector("#btn-beli3");
+
+// Add event listener to the button
+btnBeli.addEventListener("click", function () {
+  // Save the status to Local Storage
+  window.localStorage.setItem("status", "beli");
+
+  // Display the notification
+  alert("Pembelian berhasil!");
+});
+
+// Get the button element
+var btnBeli = document.querySelector("#btn-beli4");
+
+// Add event listener to the button
+btnBeli.addEventListener("click", function () {
+  // Save the status to Local Storage
+  window.localStorage.setItem("status", "beli");
+
+  // Display the notification
+  alert("Pembelian berhasil!");
+});
+
+// Function to display a notification when the "Add to Cart" button is clicked
+function addToCart() {
+  alert("Produk telah ditambahkan ke keranjang belanja!");
+}
+
+// Add an event listener to the "Add to Cart" button
+document
+  .getElementById("add-to-cart-button")
+  .addEventListener("click", addToCart);
+
+// Function to display a notification when the "Add to Cart" button is clicked
+function addToCart() {
+  alert("Produk telah ditambahkan ke keranjang belanja!");
+}
+
+// Add an event listener to the "Add to Cart" button
+document
+  .getElementById("add-to-cart-button2")
+  .addEventListener("click", addToCart);
+
+// Function to display a notification when the "Add to Cart" button is clicked
+function addToCart3() {
+  alert("Produk belum tersedia saat ini! Pilih produk lain.");
+}
+
+// Add an event listener to the "Add to Cart" button
+document
+  .getElementById("add-to-cart-button3")
+  .addEventListener("click", addToCart3);
+
+// Function to display a notification when the "Add to Cart" button is clicked
+function addToCart() {
+  alert("Produk telah ditambahkan ke keranjang belanja!");
+}
+
+// Add an event listener to the "Add to Cart" button
+document
+  .getElementById("add-to-cart-button4")
+  .addEventListener("click", addToCart);
