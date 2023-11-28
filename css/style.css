@@ -299,8 +299,13 @@ body {
 .contact h2 {
   margin-bottom: 1rem;
 }
-.menu p,
-.products p,
+.menu h3 {
+  text-align: center;
+}
+.menu p {
+  text-align: left;
+}
+
 .contact p {
   text-align: center;
   max-width: 30rem;
@@ -323,14 +328,36 @@ body {
 
 .menu .row .menu-card img {
   border-radius: 50%;
-  width: 80%;
+  width: 30%;
 }
 
 .menu .row .menu-card .menu-card-title {
-  margin: 1rem auto 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.menu-card-img {
+  float: left;
+  margin-left: 20px;
+}
+
+.menu-card-title {
+  margin-top: 10px;
+}
+
+.menu-card-content {
+  margin-top: 10px;
 }
 
 /* Products Section */
+.products h3 {
+  text-align: center;
+}
+
+.products p {
+  text-align: left;
+}
+
 .products .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -398,6 +425,20 @@ body {
   text-decoration: line-through;
   font-weight: lighter;
   font-size: 1rem;
+}
+
+.about-img {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-img-img {
+  float: left;
+  margin-right: 20px;
+}
+
+.about-img-text {
+  float: right;
 }
 
 /* Mengatur teks yang dihapus untuk memiliki garis melintang */
@@ -666,5 +707,41 @@ footer .credit a {
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+  .menu .row .menu-card img {
+    border-radius: 50%;
+    width: 100%;
+  }
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-card-img {
+    float: center;
+    margin-left: 0px;
+  }
+
+  .menu-card-title {
+    margin-top: 0px;
+  }
+
+  .menu-card-content {
+    margin-top: 0px;
+  }
+
+  .products .about-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products .about-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .products .about-img h3 {
+    text-align: center;
   }
 }

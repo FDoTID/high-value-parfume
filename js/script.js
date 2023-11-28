@@ -41,7 +41,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Modal Box
+// Klik tombol detail item
 const itemDetailModal = document.querySelector("#item-detail-modal");
 const itemDetailButtons = document.querySelectorAll(".item-detail-button");
 
@@ -82,127 +82,72 @@ itemDetailButtons4.forEach((btn) => {
   };
 });
 
-// klik tombol close modal
-document.querySelector(".modal .close-icon").onclick = (e) => {
-  itemDetailModal.style.display = "none";
-  e.preventDefault();
-};
-
-// klik di luar modal
-window.onclick = (e) => {
-  if (e.target === itemDetailModal) {
-    itemDetailModal.style.display = "none";
-  }
-};
-
-// Tambahan //
-
+// klik tombol close detail item
 function closeModal() {
-  // Tutup modal
-  document.getElementById("item-detail-modal2").style.display = "none";
-  document.getElementById("item-detail-modal3").style.display = "none";
-  document.getElementById("item-detail-modal4").style.display = "none";
+  const modals = document.querySelectorAll(".modal");
+  for (let modal of modals) {
+    modal.style.display = "none";
+  }
 }
 
-// klik di luar modal
-window.onclick = (e) => {
-  if (
-    e.target === itemDetailModal ||
-    e.target === itemDetailModal2 ||
-    e.target === itemDetailModal3 ||
-    e.target === itemDetailModal4
-  ) {
-    itemDetailModal.style.display = "none";
-    itemDetailModal2.style.display = "none";
-    itemDetailModal3.style.display = "none";
-    itemDetailModal4.style.display = "none";
+// keluar dari fitur detail item dengan klik disembarang tempat selain tombol close(X)
+const modals = document.querySelectorAll(".modal");
+
+window.addEventListener("click", (event) => {
+  const modal = event.target.closest(".modal");
+  if (modal) {
+    modal.style.display = "none";
   }
-};
+});
 
-// Get the button element
+// Notifikasi klik tombol beli (tombol keranjang)
 var btnBeli = document.querySelector("#btn-beli");
-
-// Add event listener to the button
 btnBeli.addEventListener("click", function () {
-  // Save the status to Local Storage
   window.localStorage.setItem("status", "beli");
-
-  // Display the notification
   alert("Pembelian berhasil!");
 });
 
-// Get the button element
 var btnBeli = document.querySelector("#btn-beli2");
-
-// Add event listener to the button
 btnBeli.addEventListener("click", function () {
-  // Save the status to Local Storage
   window.localStorage.setItem("status", "beli");
-
-  // Display the notification
   alert("Pembelian berhasil!");
 });
 
-// Get the button element
 var btnBeli = document.querySelector("#btn-beli3");
-
-// Add event listener to the button
 btnBeli.addEventListener("click", function () {
-  // Save the status to Local Storage
   window.localStorage.setItem("status", "beli");
-
-  // Display the notification
   alert("Pembelian berhasil!");
 });
 
-// Get the button element
 var btnBeli = document.querySelector("#btn-beli4");
-
-// Add event listener to the button
 btnBeli.addEventListener("click", function () {
-  // Save the status to Local Storage
   window.localStorage.setItem("status", "beli");
-
-  // Display the notification
   alert("Pembelian berhasil!");
 });
 
-// Function to display a notification when the "Add to Cart" button is clicked
+// Notifikasi klik tombol tambahkan ke keranjang pada detail item
 function addToCart() {
   alert("Produk telah ditambahkan ke keranjang belanja!");
 }
-
-// Add an event listener to the "Add to Cart" button
 document
   .getElementById("add-to-cart-button")
   .addEventListener("click", addToCart);
-
-// Function to display a notification when the "Add to Cart" button is clicked
-function addToCart() {
-  alert("Produk telah ditambahkan ke keranjang belanja!");
-}
-
-// Add an event listener to the "Add to Cart" button
 document
   .getElementById("add-to-cart-button2")
   .addEventListener("click", addToCart);
+document
+  .getElementById("add-to-cart-button4")
+  .addEventListener("click", addToCart);
 
-// Function to display a notification when the "Add to Cart" button is clicked
 function addToCart3() {
   alert("Produk belum tersedia saat ini! Pilih produk lain.");
 }
-
-// Add an event listener to the "Add to Cart" button
 document
   .getElementById("add-to-cart-button3")
   .addEventListener("click", addToCart3);
 
-// Function to display a notification when the "Add to Cart" button is clicked
-function addToCart() {
-  alert("Produk telah ditambahkan ke keranjang belanja!");
-}
-
-// Add an event listener to the "Add to Cart" button
-document
-  .getElementById("add-to-cart-button4")
-  .addEventListener("click", addToCart);
+// Notifikasi klik tombol kirim pesan
+const submitButton = document.querySelector(".btn");
+submitButton.addEventListener("click", () => {
+  alert("Pesan Telah Dikirim");
+});
